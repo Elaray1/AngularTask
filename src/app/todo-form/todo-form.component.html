@@ -1,0 +1,26 @@
+<div>
+  <input
+   type="text"
+   placeholder="Add todo title..."
+   [(ngModel)]="title"
+   (keydown.enter)="addTodo()"
+   >
+  <button (click)="addTodo()">Add todo</button>
+</div>
+
+
+<div class="phone-pipe">
+
+    <h1>Task:</h1>
+
+  <input #number type="string"
+   placeholder="Add phone number..."
+   [(ngModel)]="phone"
+   maxlength="9"
+  >
+</div>
+
+<!-- Задание!! -->
+<div class="result">
+  {{ phone | phonePipe:3 }}
+</div>
