@@ -6,7 +6,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 
 
 export class PhonePipeComponent implements PipeTransform {
-  transform(value: any, times: number): any {
+  transform(value: any): any {
     value = +value;
     if (!(!isNaN(parseFloat(value)) && isFinite(value))) return 'Not a phone number!'
     if (value == null || value == '') return console.log(value = '');
